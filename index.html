@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../CSS/videoAbertura.css" rel="stylesheet">
+    <link rel="icon" href="../Imagens/23.webp" type="image/png">
+    <title>Top 5 Aberturas</title>
+</head>
+
+<body>
+   <header>
+        <div class="div-header">
+            <h1 class="title-header">TOP 5 - MELHORES ABERTURAS DE ANIME</h1>
+        </div>
+   </header> 
+
+   <div id="line-header"></div> <!--LINHA ABAIXO DO HEADER-->
+
+   <main> <!--Conteudo principal-->
+    <section>
+        <div id="container-video">
+            <video class="video-principal" id="video-pr" src="../video/akame.mp4" poster="../Imagens/akame.jpg"
+            ondblclick="telaCheia()" onclick="playPause()"> </video> <!--VIDEO PRINCIPAL-->
+
+            <div class="conteudo-btn"> <!--CONTEUDO DOS BOTOES-->
+                <div id="controles" onmouseover="aparecer()" onmouseout="sumir()" class="btn-box"> <!--DIV CONTROLES DO VIDEO-->
+
+                <article id="progressBarContainer"> <!--BARRA DE PROGRESSO-->
+                    <div id="progressBar"></div>
+                    <input id="inputProgressBar" onchange="videoTime()" type="range" style="width: 100%;" min="0" max="1000" value="0" step="0.5" />
+                </article>
+
+            <article id="leftContainer"> <!--PARTE ESQUERDA DOS BOTOES-->
+                <img class="btn" id="playPauseBtn" onclick="playPauseTroca()" src="../Imagens/botao-play.png">
+                <img class="btn" id="voltarTemp" onclick="voltarTempo()" src="../Imagens/retroTempo (1).png">
+                <img class="btn" id="avanTemp" onclick="avanTempo()" src="../Imagens/avanTempo.png">
+                <img class="btn" id="btnLento" onclick="lento()" src="../Imagens/botao-retroceder.png">
+                <img class="btn" id="btnRapido" onclick="rapido()" src="../Imagens/botao-avancar.png">
+
+                <span class="time" id="currentTime">0:00</span><!--TEMPO DO VIDEO-->
+                <span class="time"> / </span>
+                <span class="time" id="totalTime">0:00</span>
+            </article>
+
+                <section id="rightContainer"> <!--PARTE DIREITA DOS BOTOES-->
+                    <article id="volumeContainer">
+                        <img class="btn" id="volumeIcon"  src="../Imagens/sound.png" alt=""/>
+                        <input id="inputVolumeBar" onchange="volumeBar()" type="range" min="0" max="100" value="100" step="1"/> <!--BARRA DE VOLUME-->
+                        <img class="btn" id="fullscreenIcon" onclick="telaCheia()" src="../Imagens/fullscreen.png" alt=""/> <!--TELA CHEIA-->
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+    </section>
+   </main>
+
+   <section>
+    <div id="next-video">
+        <a href="#div-header">
+            <div class="listvideo"> <img class="img-list" src="../Imagens/aot.jpg" alt="attackontitan">
+                <h3>1º - ATTACK ON TITAN</h3>
+            </div>
+        </a>
+        <a href="#div-header">
+            <div class="listvideo"> <img class="img-list" src="../Imagens/jjk.jpg" alt="jujutsu">
+                <h3>2º - JUJUTSU KAISEN</h3>
+            </div>
+        </a>
+        <a href="#div=header">
+            <div class="listvideo"> <img class="img-list" src="../Imagens/mob.png" alt="mobp100">
+                <h3>3º - MOB PSYCHO 100 </h3>
+            </div>
+        </a>
+        <a href="#div-header">
+            <div class="listvideo"> <img class="img-list" src="../Imagens/bc.jpg" alt="blackclover">
+                <h3>4º - BLACK CLOVER </h3>
+            </div>
+        </a>
+        <a href="#div-header">
+            <div class="listvideo"> <img class="img-list" src="../Imagens/akame.jpg" alt="akame">
+                <h3>5º - AKAME GA KILL</h3>
+            </div>
+        </a> 
+
+    </div>
+    </section>
+
+    <footer id="footerContainer">
+        <p id="textFooter">
+            Video Player desenvolvido apenas para fins estudantis sem nenhuma intenção
+            comercial. 
+            <br>
+            Desenvolvido por Thaiane Veronese
+        </p>
+    </footer>
+
+    <script src="../JS/videoAbertura.js"></script>
+</body>
+</html>
